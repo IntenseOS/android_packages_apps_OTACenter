@@ -1,3 +1,3 @@
-      OTACenter
+OTACenter
 ==========================
 IntenseOS OTA App
