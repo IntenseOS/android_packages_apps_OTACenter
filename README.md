@@ -1,3 +1,3 @@
 packages_apps_OTACenter
 ==========================
-Euphoria-OS OTA App
+IntenseOS OTA App
