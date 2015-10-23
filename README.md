@@ -1,3 +1,3 @@
-packages_apps_OTACenter
+      OTACenter
 ==========================
 IntenseOS OTA App
