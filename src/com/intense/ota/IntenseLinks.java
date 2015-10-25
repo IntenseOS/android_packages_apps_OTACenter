@@ -14,9 +14,9 @@
  *=========================================================================
  */
 
-package com.euphoria.ota;
+package com.intense.ota;
 
-import com.euphoria.ota.R;
+import com.intense.ota.R;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -39,7 +39,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EuphoriaLinks extends Fragment {
+public class IntenseLinks extends Fragment {
 
     private LinearLayout mDownload;
     private LinearLayout mDownloadGapps;
@@ -65,7 +65,7 @@ public class EuphoriaLinks extends Fragment {
     private static Intent IRC_INTENT = new Intent(Intent.ACTION_VIEW, Uri.parse("ccircslim:1"));
 
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.euphoria_ota_links, container, false);
+        View view = inflater.inflate(R.layout.intense_ota_links, container, false);
         return view;
     }
 
@@ -80,18 +80,10 @@ public class EuphoriaLinks extends Fragment {
                     launchUrl(getString(R.string.download_url));
                 }
             } else if (v == mDownloadGapps) {
-                if (mStrCurFile != null
-                    && mStrCurFile.contains("4.4")) {
-                    launchUrl(getString(R.string.gapps_url_kitkat));
-                } else {
-                    launchUrl(getString(R.string.gapps_url));
-                }
             } else if (v == mGoogleplus) {
-                launchUrl("https://plus.google.com/u/0/communities/116795582851167273031");
-            } else if (v == mXda) {
-                launchUrl(getString(R.string.xda_url));
+                launchUrl("https://plus.google.com/communities/111307265018615581007");
             } else if (v == mSource) {
-                launchUrl("http://github.com/Euphoria-OS");
+                launchUrl("http://github.com/IntenseOS");
             }
         }
     };
@@ -112,9 +104,6 @@ public class EuphoriaLinks extends Fragment {
 
         mGoogleplus = (LinearLayout) getView().findViewById(R.id.googleplus);
         mGoogleplus.setOnClickListener(mActionLayouts);
-
-        mXda = (LinearLayout) getView().findViewById(R.id.xda);
-        mXda.setOnClickListener(mActionLayouts);
 
         mSource = (LinearLayout) getView().findViewById(R.id.source);
         mSource.setOnClickListener(mActionLayouts);

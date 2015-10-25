@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.euphoria.ota.updater;
+package com.intense.ota.updater;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;

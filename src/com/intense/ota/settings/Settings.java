@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.euphoria.ota.settings;
+package com.intense.ota.settings;
 
 import android.app.AlarmManager;
 import android.content.SharedPreferences;
@@ -26,8 +26,8 @@ import android.preference.PreferenceActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.euphoria.ota.updater.UpdateListener;
-import com.euphoria.ota.R;
+import com.intense.ota.updater.UpdateListener;
+import com.intense.ota.R;
 
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
@@ -46,7 +46,7 @@ public class Settings extends PreferenceActivity implements
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        addPreferencesFromResource(R.xml.euphoria_ota_settings);
+        addPreferencesFromResource(R.xml.intense_ota_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 
@@ -103,7 +103,7 @@ public class Settings extends PreferenceActivity implements
             } else {
                 SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
                 prefs.edit().putLong(LAST_INTERVAL, 1).apply();
-                com.euphoria.ota.updater.ConnectivityReceiver.disableReceiver(this);
+                com.intense.ota.updater.ConnectivityReceiver.disableReceiver(this);
                 WakefulIntentService.cancelAlarms(this);
             }
     }

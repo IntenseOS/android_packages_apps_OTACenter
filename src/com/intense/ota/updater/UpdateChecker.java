@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.euphoria.ota.updater;
+package com.intense.ota.updater;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -42,8 +42,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.euphoria.center.OTACenter;
-import com.euphoria.ota.R;
+import com.intense.center.OTACenter;
+import com.intense.ota.R;
 
 public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     private static final String TAG = "UpdateChecker";
@@ -106,9 +106,9 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                 String[] line = strLine.split("=");
                 if (line[0].equalsIgnoreCase("ro.product.device")) {
                     strDevice = line[1].trim();
-                } else if (line[0].equalsIgnoreCase("eos.ota.version")) {
+                } else if (line[0].equalsIgnoreCase("intense.ota.version")) {
                     CurVer = line[1].trim();
-                } else if (strDevice == null && line[0].equalsIgnoreCase("ro.eos.device")){
+                } else if (strDevice == null && line[0].equalsIgnoreCase("ro.intense.device")){
                     strDevice = line[1].trim();
                 }
             }
