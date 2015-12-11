@@ -72,8 +72,8 @@
     <!-- URL's -->
     <string name="download_url">http://http://androidfilehost.com/</string>
     <string name="changelog_url">http://fs1.androidfilesharing.com/ota/changelog.txt</string>
-    <string name="gapps_url">https://www.androidfilehost.com/?w=files&flid=36876</string>
-    <string name="gapps_url_kitkat">https://www.androidfilehost.com/?w=files&flid=36876</string>
+    <string name="gapps_url">opengapps.org</string>
+    <string name="gapps_url_kitkat">opengapps.org</string>
 
     <!-- Update checker -->
     <string name="xml_url_kitkat">http://http://androidfilehost.com</string>
